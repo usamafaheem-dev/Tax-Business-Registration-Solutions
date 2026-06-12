@@ -36,7 +36,9 @@ export default function ContactPageForm() {
     return newErrors;
   }
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     const validationErrors = validate(formData);
@@ -47,7 +49,31 @@ export default function ContactPageForm() {
     }
 
     setErrors({});
-    setSubmitted(true);
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.get("name"),
+          email: formData.get("email"),
+          phone: formData.get("phone"),
+          message: formData.get("message"),
+        }),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+      } else {
+        alert("Failed to send message. Please try again.");
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Something went wrong. Please try again later.");
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -199,9 +225,10 @@ export default function ContactPageForm() {
             <div className="mt-2">
               <button
                 type="submit"
-                className="bg-transparent border-2 border-emerald-900 text-emerald-900 hover:bg-emerald-900 hover:text-white font-bold text-[13px] md:text-[14px] px-6 py-2.5 transition-all rounded-full flex items-center justify-center gap-2 uppercase tracking-wide w-full md:w-max shadow-sm hover:shadow-md"
+                disabled={isSubmitting}
+                className="bg-transparent border-2 border-emerald-900 text-emerald-900 hover:bg-emerald-900 hover:text-white disabled:opacity-50 disabled:cursor-not-allowed font-bold text-[13px] md:text-[14px] px-6 py-2.5 transition-all rounded-full flex items-center justify-center gap-2 uppercase tracking-wide w-full md:w-max shadow-sm hover:shadow-md"
               >
-                <span>Submit Message</span>
+                <span>{isSubmitting ? "Sending..." : "Submit Message"}</span>
               </button>
             </div>
           </form>

@@ -27,7 +27,9 @@ export default function ContactSection() {
     return newErrors;
   }
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     const validationErrors = validate(formData);
@@ -38,7 +40,31 @@ export default function ContactSection() {
     }
 
     setErrors({});
-    setSubmitted(true);
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.get("name"),
+          email: formData.get("email"),
+          phone: formData.get("phone"),
+          message: formData.get("message"),
+        }),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+      } else {
+        alert("Failed to send message. Please try again.");
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Something went wrong. Please try again later.");
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -60,8 +86,8 @@ export default function ContactSection() {
                 Contact Us
               </Badge>
               
-              <AnimatedHeading as="h2" className="font-display text-4xl font-extrabold leading-tight text-neutral-900 md:text-5xl lg:text-[3.5rem] mb-6">
-                Get In <span className="inline-block bg-emerald-900 text-white px-3 py-1 rounded-lg font-extrabold -rotate-2 shadow-sm transition-transform duration-300 hover:scale-105">Touch</span>
+              <AnimatedHeading as="h2" className="font-display text-4xl font-extrabold leading-tight text-neutral-900 md:text-5xl lg:text-[3.5rem] mb-6" style={{ fontFamily: '"Cabinet Grotesk", sans-serif' }}>
+                Get In <span className="inline-block bg-emerald-900 text-white px-3 py-1 rounded-lg font-extrabold -rotate-2 shadow-sm transition-transform duration-300 hover:scale-105" style={{ fontFamily: '"Cabinet Grotesk", sans-serif' }}>Touch</span>
               </AnimatedHeading>
               <p className="text-neutral-600 text-lg leading-relaxed mb-8 max-w-md font-sans">
                 We are always here to help. Reach out to us directly through WhatsApp or Email, or simply fill out the form, and we will get back to you as soon as possible.
@@ -199,9 +225,10 @@ export default function ContactSection() {
 
                     <button
                       type="submit"
-                      className="mt-2 flex w-full items-center justify-center gap-2 rounded-xl bg-neutral-900 hover:bg-black px-8 py-4 text-[0.95rem] font-bold tracking-wide text-white transition-all hover:-translate-y-0.5 shadow-md hover:shadow-xl active:translate-y-0 font-sans"
+                      disabled={isSubmitting}
+                      className="mt-2 flex w-full items-center justify-center gap-2 rounded-xl bg-neutral-900 hover:bg-black px-8 py-4 text-[0.95rem] font-bold tracking-wide text-white transition-all hover:-translate-y-0.5 shadow-md hover:shadow-xl active:translate-y-0 font-sans disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0"
                     >
-                      Submit Message
+                      {isSubmitting ? "Sending..." : "Submit Message"}
                     </button>
                   </form>
                 )}

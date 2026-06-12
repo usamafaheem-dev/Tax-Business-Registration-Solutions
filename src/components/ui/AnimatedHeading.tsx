@@ -30,12 +30,14 @@ interface AnimatedHeadingProps {
   children: React.ReactNode;
   className?: string;
   as?: React.ElementType;
+  style?: React.CSSProperties;
 }
 
 export default function AnimatedHeading({
   children,
   className = "",
   as: Component = "h2",
+  style,
 }: AnimatedHeadingProps) {
   const MotionComponent = motion(Component as any);
 
@@ -46,6 +48,7 @@ export default function AnimatedHeading({
       whileInView="visible"
       viewport={{ once: true, margin: "-50px" }}
       className={className}
+      style={style}
     >
       {React.Children.map(children, (child, index) => {
         if (typeof child === "string") {

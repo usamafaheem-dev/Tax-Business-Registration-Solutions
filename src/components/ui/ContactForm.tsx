@@ -29,7 +29,9 @@ export default function ContactForm({ compact = false }: ContactFormProps) {
     return newErrors;
   }
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     const validationErrors = validate(formData);
@@ -40,7 +42,31 @@ export default function ContactForm({ compact = false }: ContactFormProps) {
     }
 
     setErrors({});
-    setSubmitted(true);
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.get("name"),
+          email: formData.get("email"),
+          phone: formData.get("phone"),
+          message: formData.get("message"),
+        }),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+      } else {
+        alert("Failed to send message. Please try again.");
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Something went wrong. Please try again later.");
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   if (submitted) {
@@ -138,10 +164,11 @@ export default function ContactForm({ compact = false }: ContactFormProps) {
 
       <button
         type="submit"
-        className="btn-pill btn-pill-accent mt-6"
+        disabled={isSubmitting}
+        className="btn-pill btn-pill-accent mt-6 disabled:opacity-50 disabled:cursor-not-allowed"
       >
         <Send className="h-4 w-4" />
-        Send Message
+        {isSubmitting ? "Sending..." : "Send Message"}
       </button>
     </form>
   );
