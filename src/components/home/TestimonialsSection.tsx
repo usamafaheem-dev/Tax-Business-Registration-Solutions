@@ -155,6 +155,7 @@ export default function TestimonialsSection() {
                         src={testimonial.avatar}
                         alt={testimonial.name}
                         fill
+                        sizes="56px"
                         className="object-cover"
                       />
                     </div>

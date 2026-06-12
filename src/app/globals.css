@@ -1,6 +1,4 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap');
-@import url('https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@800,500,700,400,900&display=swap');
 
 @source "../**/*.{js,ts,jsx,tsx,mdx}";
 
@@ -36,8 +34,8 @@
   --color-text: #1e1b4b;
   --color-nav: #312e81;
 
-  --font-sans: "Cabinet Grotesk", "Google Sans Flex", "Google Sans", "Outfit", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Cabinet Grotesk", "Google Sans Flex", "Google Sans", "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Cabinet Grotesk", var(--font-outfit, "Outfit"), "Google Sans Flex", "Google Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Cabinet Grotesk", var(--font-outfit, "Outfit"), "Google Sans Flex", "Google Sans", ui-sans-serif, system-ui, sans-serif;
 }
 
 .font-display {

@@ -108,6 +108,7 @@ export default function AboutSection() {
                   src="/images/about_us.jpeg"
                   alt="Volunteer"
                   fill
+                  sizes="(max-width: 1024px) 100vw, 400px"
                   className="object-cover"
                 />
               </div>
@@ -137,6 +138,7 @@ export default function AboutSection() {
                       src={`/images/about-education.jpg`}
                       alt="Avatar"
                       fill
+                      sizes="48px"
                       className="object-cover"
                     />
                   </div>
