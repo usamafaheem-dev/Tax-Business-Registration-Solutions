@@ -89,6 +89,7 @@ export default function BlogsPage() {
                   loop
                   muted
                   playsInline
+                  preload="metadata"
                   className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
                 />
               ) : (
@@ -96,6 +97,8 @@ export default function BlogsPage() {
                   src={featuredPost.image}
                   alt={featuredPost.title}
                   fill
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 45vw"
                   className="object-cover transition-transform duration-700 hover:scale-105"
                 />
               )}
@@ -183,6 +186,7 @@ export default function BlogsPage() {
                           loop
                           muted
                           playsInline
+                          preload="none"
                           className="h-full w-full object-cover"
                         />
                       ) : (
@@ -190,6 +194,7 @@ export default function BlogsPage() {
                           src={post.image}
                           alt={post.title}
                           fill
+                          sizes="(max-width: 640px) 100vw, 40vw"
                           className="object-cover"
                         />
                       )}

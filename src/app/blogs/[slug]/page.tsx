@@ -96,14 +96,17 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 loop
                 muted
                 playsInline
-                className="h-full w-full object-cover opacity-95"
+                preload="metadata"
+                className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
               />
             ) : (
               <Image
                 src={post.image}
                 alt={post.title}
                 fill
-                className="object-cover opacity-95"
+                priority
+                sizes="(max-width: 1200px) 100vw, 1200px"
+                className="object-cover transition-transform duration-700 hover:scale-105"
               />
             )}
           </div>
@@ -139,11 +142,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             <div className="flex flex-col gap-6">
               {recentBlogs.map((recent) => (
                 <Link href={`/blogs/${recent.slug}`} key={recent.slug} className="group flex items-start gap-4">
-                  <div className="relative w-20 h-20 rounded-xl overflow-hidden shrink-0">
+                  <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-xl">
                     {recent.image.endsWith('.mp4') ? (
-                      <video src={recent.image} autoPlay loop muted playsInline className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" />
+                      <video src={recent.image} autoPlay loop muted playsInline preload="none" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" />
                     ) : (
-                      <Image src={recent.image} alt={recent.title} fill className="object-cover transition-transform duration-500 group-hover:scale-110" />
+                      <Image src={recent.image} alt={recent.title} fill sizes="96px" className="object-cover transition-transform duration-500 group-hover:scale-110" />
                     )}
                   </div>
                   <div>
