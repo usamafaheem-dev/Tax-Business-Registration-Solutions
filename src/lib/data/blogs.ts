@@ -37,7 +37,7 @@ export const blogPosts = [
     date: "20 Feb 2025",
     category: "Youth",
     readTime: "4 min read",
-    image: "/images/about-community.png",
+    image: "/images/about-community.webp",
   },
   {
     slug: "healthcare-awareness",
@@ -47,7 +47,7 @@ export const blogPosts = [
     date: "12 Feb 2025",
     category: "Healthcare",
     readTime: "5 min read",
-    image: "/images/about-donations.png",
+    image: "/images/about-donations.webp",
   },
   {
     slug: "volunteer-impact",

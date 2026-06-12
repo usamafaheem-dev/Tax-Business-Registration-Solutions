@@ -16,13 +16,13 @@ interface Member {
 }
 
 const teamMembers: Member[] = [
-  { name: "David Chen", role: "Volunteer Coordinator", image: "/images/team-1.png" },
-  { name: "Dr. Sarah Ahmed", role: "Founder & Director", image: "/images/team-2.png" },
-  { name: "Michael Osei", role: "Operations Manager", image: "/images/team-3.png" },
-  { name: "Ali Raza", role: "Programs Manager", image: "/images/team-4.png" },
-  { name: "Omar Farooq", role: "Education Lead", image: "/images/team-5.png" },
-  { name: "Nadia Rahman", role: "Community Outreach Lead", image: "/images/team-6.png" },
-  { name: "Hassan Malik", role: "Healthcare Coordinator", image: "/images/team-7.png" },
+  { name: "David Chen", role: "Volunteer Coordinator", image: "/images/team-1.webp" },
+  { name: "Dr. Sarah Ahmed", role: "Founder & Director", image: "/images/team-2.webp" },
+  { name: "Michael Osei", role: "Operations Manager", image: "/images/team-3.webp" },
+  { name: "Ali Raza", role: "Programs Manager", image: "/images/team-4.webp" },
+  { name: "Omar Farooq", role: "Education Lead", image: "/images/team-5.webp" },
+  { name: "Nadia Rahman", role: "Community Outreach Lead", image: "/images/team-6.webp" },
+  { name: "Hassan Malik", role: "Healthcare Coordinator", image: "/images/team-7.webp" },
 ];
 
 // Repeat list 3 times to support infinite scroll loop seamlessly

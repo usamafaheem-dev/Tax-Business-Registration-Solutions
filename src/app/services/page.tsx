@@ -167,15 +167,15 @@ export default function ServicesPage() {
               <div className="grid grid-cols-[1fr_0.8fr] gap-3 h-full relative z-10">
                 {/* Left tall image */}
                 <div className="relative h-full w-full rounded-l-[2.5rem] rounded-tr-[1rem] rounded-br-sm overflow-hidden bg-neutral-200 shadow-md">
-                  <Image src="https://i.pinimg.com/1200x/55/79/b9/5579b9f80adb472d1e75df503ca23db5.jpg" alt="Volunteers" fill className="object-cover object-center transition-all duration-700" />
+                  <Image src="https://i.pinimg.com/1200x/55/79/b9/5579b9f80adb472d1e75df503ca23db5.jpg" alt="Volunteers" fill sizes="(max-width: 1024px) 100vw, 400px" className="object-cover object-center transition-all duration-700" />
                 </div>
                 {/* Right stacked images */}
                 <div className="grid grid-rows-2 gap-3 h-full">
                   <div className="relative h-full w-full rounded-tr-[2.5rem] rounded-tl-[1rem] rounded-b-sm overflow-hidden bg-neutral-200 shadow-md">
-                    <Image src="https://i.pinimg.com/736x/aa/7b/9d/aa7b9dc8812c7295dfa0f3e62a0ddd1a.jpg" alt="Community" fill className="object-cover transition-all duration-700" />
+                    <Image src="https://i.pinimg.com/736x/aa/7b/9d/aa7b9dc8812c7295dfa0f3e62a0ddd1a.jpg" alt="Community" fill sizes="(max-width: 1024px) 50vw, 250px" className="object-cover transition-all duration-700" />
                   </div>
                   <div className="relative h-full w-full rounded-br-[2.5rem] rounded-tl-sm rounded-tr-[1rem] overflow-hidden bg-neutral-200 shadow-md">
-                    <Image src="https://i.pinimg.com/1200x/68/86/cf/6886cff4fec683db4a4637df181e75e7.jpg" alt="Education" fill className="object-cover transition-all duration-700" />
+                    <Image src="https://i.pinimg.com/1200x/68/86/cf/6886cff4fec683db4a4637df181e75e7.jpg" alt="Education" fill sizes="(max-width: 1024px) 50vw, 250px" className="object-cover transition-all duration-700" />
                   </div>
                 </div>
               </div>

@@ -46,7 +46,7 @@ export default function HeroSection() {
     <section className="relative h-[100svh] min-h-[550px] overflow-hidden flex flex-col justify-center">
       {/* Background Image */}
       <Image
-        src="/images/NGO_foundation_website_hero_banner_202606120921.jpeg"
+        src="/images/NGO_foundation_website_hero_banner_202606120921.webp"
         alt="Donations and community support"
         fill
         priority

@@ -105,7 +105,7 @@ export default function AboutSection() {
               
               <div className="relative h-full w-full overflow-hidden rounded-t-full shadow-xl">
                 <Image
-                  src="/images/about_us.jpeg"
+                  src="/images/about_us.webp"
                   alt="Volunteer"
                   fill
                   sizes="(max-width: 1024px) 100vw, 400px"

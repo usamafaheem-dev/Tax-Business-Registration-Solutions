@@ -119,10 +119,10 @@ export async function POST(request: Request) {
       { message: "Emails sent successfully!" },
       { status: 200 }
     );
-  } catch (error: unknown) {
+  } catch (error: any) {
     console.error("Error sending email:", error);
     return NextResponse.json(
-      { error: "Failed to send email.", details: error.message },
+      { error: "Failed to send email.", details: error?.message || String(error) },
       { status: 500 }
     );
   }

@@ -86,12 +86,12 @@ export default function AboutPage() {
 
               {/* Tilted Left Image */}
               <div className="absolute left-[5%] top-[15%] w-[55%] h-[70%] rounded-[2rem] overflow-hidden shadow-2xl -rotate-6 z-10 bg-neutral-200">
-                <Image src="/images/about-community.png" alt="Our Community" fill className="object-cover" />
+                <Image src="/images/about-community.webp" alt="Our Community" fill sizes="(max-width: 768px) 100vw, 300px" className="object-cover" />
               </div>
 
               {/* Right Floating Image */}
               <div className="absolute right-[10%] top-[5%] w-[45%] h-[50%] rounded-[2rem] overflow-hidden shadow-xl z-20 border-4 border-white bg-neutral-200">
-                <Image src="/images/about-education.jpg" alt="Online Learning" fill className="object-cover" />
+                <Image src="/images/about-education.jpg" alt="Online Learning" fill sizes="(max-width: 768px) 100vw, 250px" className="object-cover" />
               </div>
 
               {/* Floating Badge */}

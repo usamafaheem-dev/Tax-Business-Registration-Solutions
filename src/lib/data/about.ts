@@ -33,7 +33,7 @@ export const storyTimeline = [
     icon: "users",
     color: "bg-orange-500",
     iconColor: "text-white",
-    image: "/images/hero-bg.png",
+    image: "/images/hero-bg.webp",
   },
   {
     date: "2022",
@@ -42,7 +42,7 @@ export const storyTimeline = [
     icon: "sparkles",
     color: "bg-violet-500",
     iconColor: "text-white",
-    image: "/images/hero-bg.png",
+    image: "/images/hero-bg.webp",
   },
   {
     date: "2024",

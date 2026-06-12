@@ -13,7 +13,7 @@ const extendedTestimonials = testimonials.map((t, index) => ({
   ...t,
   id: index,
   rating: 5,
-  avatar: ["/images/about-education.jpg", "/images/about-community.png", "/images/about-volunteers.jpg"][index % 3],
+  avatar: ["/images/about-education.jpg", "/images/about-community.webp", "/images/about-volunteers.jpg"][index % 3],
 }));
 
 export default function TestimonialsSection() {
