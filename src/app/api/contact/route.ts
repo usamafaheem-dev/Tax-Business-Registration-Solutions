@@ -98,7 +98,7 @@ export async function POST(request: Request) {
             </p>
             
             <div style="text-align: center;">
-              <a href="https://hopebridge.org" style="display: inline-block; background-color: #064e3b; color: #ffffff; text-decoration: none; font-weight: 600; font-size: 15px; padding: 14px 28px; border-radius: 9999px;">Visit Our Website</a>
+              <a href="https://ngo-eight-sigma.vercel.app/" style="display: inline-block; background-color: #064e3b; color: #ffffff; text-decoration: none; font-weight: 600; font-size: 15px; padding: 14px 28px; border-radius: 9999px;">Visit Our Website</a>
             </div>
           </div>
           
@@ -119,7 +119,7 @@ export async function POST(request: Request) {
       { message: "Emails sent successfully!" },
       { status: 200 }
     );
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error("Error sending email:", error);
     return NextResponse.json(
       { error: "Failed to send email.", details: error.message },
