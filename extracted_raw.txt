@@ -1,0 +1,75 @@
+Created At: 2026-06-10T07:18:04Z
+Completed At: 2026-06-10T07:18:04Z
+File Path: `file:///f:/Web%20dev%20Project%20work/Softcr8ors%20projects/Agency_website/src/components/home/WhyChooseUsSection.tsx`
+Total Lines: 127
+Total Bytes: 6541
+Showing lines 1 to 127
+The following code has been modified to include a line number before every line, in the format: <line_number>: <original_line>. Please note that any changes targeting the original code should remove the line number, colon, and leading space.
+1: "use client";
+2: 
+3: import { HeartHandshake } from "lucide-react";
+4: import FadeIn from "@/components/ui/FadeIn";
+5: import Badge from "@/components/ui/Badge";
+6: import { motion } from "framer-motion";
+7: 
+8: const features = [
+9:   { id: "01", title: "Trusted Organization", align: "right" as const },
+10:   { id: "02", title: "Transparent Operations", align: "right" as const },
+11:   { id: "03", title: "Experienced Team", align: "left" as const },
+12:   { id: "04", title: "Positive Community Impact", align: "left" as const },
+13: ];
+14: 
+15: export default function WhyChooseUsSection() {
+16:   return (
+17:     <section className="relative overflow-hidden bg-[#05150f] py-24 lg:py-32">
+18:       {/* Background Ambience */}
+19:       <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-5 mix-blend-overlay"></div>
+20:       <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-emerald-900/20 blur-[120px] rounded-full pointer-events-none" />
+21: 
+22:       <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10 relative z-10">
+23:         <FadeIn>
+24:           <div className="mb-16 text-center lg:mb-24">
+25:             <Badge dotColor="bg-emerald-400" textColor="text-white" className="border-emerald-800 bg-emerald-900/50 backdrop-blur-md mb-4">
+26:               Why Choose Us
+27:             </Badge>
+28:             <h2 className="font-display text-4xl font-extrabold leading-tight text-white md:text-5xl lg:text-6xl">
+29:               One Vision <span classNa
+<truncated 3554 bytes>
+ut" }}
+92:                 className="relative flex h-32 w-32 md:h-40 md:w-40 items-center justify-center rounded-full border border-emerald-400/50 bg-[#0a2e1f] backdrop-blur-xl"
+93:               >
+94:                 <HeartHandshake className="h-16 w-16 md:h-20 md:w-20 text-emerald-400 drop-shadow-[0_0_15px_rgba(52,211,102,1)]" />
+95:                 
+96:                 {/* Inner Glow Rings */}
+97:                 <div className="absolute inset-0 rounded-full border border-emerald-400/20 scale-110" />
+98:                 <div className="absolute inset-0 rounded-full border border-emerald-400/10 scale-125" />
+99:               </motion.div>
+100:               
+101:               {/* Bottom Base Platform Glow */}
+102:               <div className="absolute -bottom-10 left-1/2 h-8 w-48 -translate-x-1/2 rounded-full bg-emerald-500/30 blur-2xl" />
+103:             </FadeIn>
+104:           </div>
+105: 
+106:           {/* Right Column Items */}
+107:           <div className="flex w-full lg:w-[35%] flex-col gap-12 lg:gap-40 lg:py-10">
+108:             {features.slice(2, 4).map((feature, idx) => (
+109:               <FadeIn key={feature.id} delay={(idx + 2) * 0.1}>
+110:                 <div className="flex flex-col items-center lg:items-start text-center lg:text-left relative z-10 group">
+111:                   <span className="font-display text-3xl md:text-4xl font-black text-emerald-500/20 transition-colors duration-500 group-hover:text-emerald-400 group-hover:drop-shadow-[0_0_10px_rgba(52,211,102,0.8)]">
+112:                     {feature.id}
+113:                   </span>
+114:                   <h3 className="mt-1 font-display text-xl md:text-2xl font-bold text-white tracking-wide">
+115:                     {feature.title}
+116:                   </h3>
+117:                 </div>
+118:               </FadeIn>
+119:             ))}
+120:           </div>
+121: 
+122:         </div>
+123:       </div>
+124:     </section>
+125:   );
+126: }
+127: 
+The above content shows the entire, complete file contents of the requested file.

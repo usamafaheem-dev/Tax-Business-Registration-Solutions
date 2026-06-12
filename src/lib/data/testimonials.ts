@@ -1,0 +1,51 @@
+export const testimonials = [
+  {
+    name: "Ayesha Khan",
+    role: "Volunteer",
+    quoteStart: "Joining HopeBridge completely transformed my perspective on ",
+    highlight: "community service",
+    quoteEnd: ". The tangible impact we create together is truly meaningful.",
+  },
+  {
+    name: "Muhammad Ali",
+    role: "Program Beneficiary",
+    quoteStart: "The education support program was an absolute ",
+    highlight: "lifeline",
+    quoteEnd: " for my family. It helped my children stay in school during our toughest times.",
+  },
+  {
+    name: "Fatima Hassan",
+    role: "Community Leader",
+    quoteStart: "HopeBridge works with an exceptional level of ",
+    highlight: "transparency",
+    quoteEnd: ". Their workshops have directly empowered dozens of women in our neighborhood.",
+  },
+  {
+    name: "Zainab Ahmed",
+    role: "Medical Volunteer",
+    quoteStart: "Being a part of the free healthcare camps is incredibly ",
+    highlight: "fulfilling",
+    quoteEnd: ". They reach remote areas that desperately need medical attention the most.",
+  },
+  {
+    name: "Bilal Tariq",
+    role: "Local Business Owner",
+    quoteStart: "I have been donating for 5 years. Their immediate action during crises makes them highly ",
+    highlight: "trustworthy",
+    quoteEnd: ". I know exactly where my contribution goes.",
+  },
+  {
+    name: "Sana Malik",
+    role: "Youth Trainee",
+    quoteStart: "The digital literacy program completely turned my career around. I landed my first ",
+    highlight: "freelance tech job",
+    quoteEnd: " within just six months of joining.",
+  },
+  {
+    name: "Usman Raza",
+    role: "Social Worker",
+    quoteStart: "The unwavering dedication and highly strategic approach of HopeBridge is truly ",
+    highlight: "unmatched",
+    quoteEnd: ". They focus on building sustainable solutions that last for generations.",
+  },
+];
