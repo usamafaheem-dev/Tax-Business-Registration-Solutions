@@ -205,24 +205,26 @@ body {
 }
 
 .btn-pill-primary {
-  border: 2px solid var(--color-text);
-  background: white;
-  color: var(--color-text);
+  border: 2px solid #f2cf07;
+  background: #f2cf07;
+  color: #070142;
 }
 
 .btn-pill-primary:hover {
-  background: var(--color-text);
+  background: #070142;
   color: white;
+  border-color: #070142;
 }
 
 .btn-pill-accent {
-  background: linear-gradient(135deg, var(--color-accent), var(--color-orange));
-  color: var(--color-text);
+  background: #f2cf07;
+  color: #070142;
   border: none;
 }
 
 .btn-pill-accent:hover {
-  filter: brightness(1.05);
+  background: #070142;
+  color: white;
   transform: translateY(-1px);
 }
 

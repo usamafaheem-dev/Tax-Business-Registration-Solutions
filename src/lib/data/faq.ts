@@ -1,32 +1,32 @@
 export const faqs = [
   {
-    question: "How can I make a donation?",
+    question: "What services does My Business Solution (MBS) provide?",
     answer:
-      "You can donate online through our secure portal, via bank transfer, or in person at our office. Contact us for donation details and tax receipt information.",
+      "MBS provides a comprehensive suite of services including FBR Income Tax & Sales Tax returns, SECP Private Limited & AOP company registration, Trademark & logo filing, WEBOC/PSW Import-Export licensing, and ongoing corporate compliance.",
   },
   {
-    question: "How can I become a volunteer?",
+    question: "What documents are required to register a Private Limited company with SECP?",
     answer:
-      "Fill out our contact form or reach us on WhatsApp. We will schedule an orientation session and match you with a program based on your skills and availability.",
+      "To initiate SECP company registration, we require three proposed names for reservation, CNIC copies of all directors, director contact numbers and emails, and a registered address for the company.",
   },
   {
-    question: "What areas does the NGO work in?",
+    question: "What are the benefits of becoming an active taxpayer (Filer) in Pakistan?",
     answer:
-      "We operate across education, healthcare, women empowerment, youth training, and community welfare—with active programs in urban and rural communities throughout the region.",
+      "Active taxpayers (Filers) pay significantly lower withholding tax rates on banking transactions, vehicle registration, property transfer, and cash withdrawals. It also allows you to conduct clean business transactions with corporate entities.",
   },
   {
-    question: "Are my donations tax-deductible?",
+    question: "How long does the SECP company registration process take?",
     answer:
-      "Yes, all donations made to our registered NGO are 100% tax-deductible under the applicable government laws. We provide an official receipt for every contribution.",
+      "Typically, SECP company incorporation is completed within 5 to 7 working days, subject to name availability approvals and payment verification of SECP statutory fees.",
   },
   {
-    question: "Can I sponsor a specific program?",
+    question: "Why should I secure a Trademark for my business name and logo?",
     answer:
-      "Absolutely. You can choose to direct your funds specifically to our educational scholarships, healthcare camps, or community development initiatives.",
+      "Registering your brand name or logo with IPO Pakistan grants you exclusive legal ownership. It prevents competitors from copying your branding, protects your goodwill, and allows you to take legal action against infringement.",
   },
   {
-    question: "Do you offer corporate partnerships?",
+    question: "Do you offer monthly compliance services for FBR, SRB, and PRA?",
     answer:
-      "Yes, we actively collaborate with businesses for CSR (Corporate Social Responsibility) initiatives. Please reach out to our team to discuss partnership opportunities.",
+      "Yes, we provide ongoing monthly sales tax filing and compliance management for the Federal Board of Revenue (FBR), Sindh Revenue Board (SRB), and Punjab Revenue Authority (PRA).",
   },
 ];

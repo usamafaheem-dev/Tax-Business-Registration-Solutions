@@ -10,7 +10,7 @@ interface SectionTitleProps {
 const accentStyles = {
   purple: "bg-primary-light text-primary-dark",
   blue: "bg-blue-100 text-blue-700",
-  mint: "bg-mint-light text-emerald-700",
+  mint: "bg-[#070142]light text-[#070142]",
   yellow: "bg-accent-light text-amber-700",
   orange: "bg-orange-light text-orange-700",
 };

@@ -16,13 +16,13 @@ interface Member {
 }
 
 const teamMembers: Member[] = [
-  { name: "David Chen", role: "Volunteer Coordinator", image: "/images/team-1.webp" },
-  { name: "Dr. Sarah Ahmed", role: "Founder & Director", image: "/images/team-2.webp" },
-  { name: "Michael Osei", role: "Operations Manager", image: "/images/team-3.webp" },
-  { name: "Ali Raza", role: "Programs Manager", image: "/images/team-4.webp" },
-  { name: "Omar Farooq", role: "Education Lead", image: "/images/team-5.webp" },
-  { name: "Nadia Rahman", role: "Community Outreach Lead", image: "/images/team-6.webp" },
-  { name: "Hassan Malik", role: "Healthcare Coordinator", image: "/images/team-7.webp" },
+  { name: "Sarah Ahmed", role: "Senior Tax Advisor", image: "/images/team-2.webp" },
+  { name: "Omar Farooq", role: "SECP & Compliance Lead", image: "/images/team-5.webp" },
+  { name: "Nadia Rahman", role: "Trademark & Intellectual Property Counsel", image: "/images/team-6.webp" },
+  { name: "Hassan Malik", role: "Senior Tax Consultant", image: "/images/team-7.webp" },
+  { name: "Muhammad Usama", role: "Managing Partner & Director", image: "/images/team-3.webp" },
+  { name: "David Chen", role: "Company Secretary", image: "/images/team-1.webp" },
+  { name: "Hamza Khan", role: "Intellectual Property Specialist", image: "/images/team-4.webp" },
 ];
 
 // Repeat list 3 times to support infinite scroll loop seamlessly
@@ -42,10 +42,10 @@ const TeamCard = ({ member, idx, scrollX, containerWidth }: TeamCardProps) => {
 
   // Position of card center relative to container start (no start padding needed for loop)
   const cardCenter = idx * (cardWidth + gap) + cardWidth / 2;
-  
+
   // scrollX value when this card is exactly centered in the viewport
   const centerX = cardCenter - containerWidth / 2;
-  
+
   // Distance over which the interpolation occurs
   const rangeWidth = containerWidth > 0 ? containerWidth * 0.55 : 300;
 
@@ -78,7 +78,7 @@ const TeamCard = ({ member, idx, scrollX, containerWidth }: TeamCardProps) => {
         rotate,
         y: translateY,
       }}
-      className="relative aspect-[3/4] cursor-pointer group flex-shrink-0 origin-center rounded-[1.5rem] md:rounded-[2rem] overflow-hidden bg-emerald-900 border-2 border-emerald-800 shadow-xl hover:shadow-[0_20px_40px_rgba(6,78,59,0.4)] hover:border-emerald-600 transition-all duration-300 select-none"
+      className="relative aspect-[3/4] cursor-pointer group flex-shrink-0 origin-center rounded-[1.5rem] md:rounded-[2rem] overflow-hidden bg-[#070142] border-2 border-[#070142] shadow-xl hover:shadow-[0_20px_40px_rgba(6,78,59,0.4)] hover:border-[#070142] transition-all duration-300 select-none"
     >
       <Image
         src={member.image}
@@ -89,20 +89,20 @@ const TeamCard = ({ member, idx, scrollX, containerWidth }: TeamCardProps) => {
         priority={idx >= teamMembers.length && idx < teamMembers.length * 2}
       />
       {/* Elegant overlay always visible, giving it the green UI brand color at the bottom */}
-      <div className="absolute inset-0 bg-gradient-to-t from-emerald-950/90 via-emerald-950/45 to-transparent flex flex-col justify-end p-4 md:p-6 text-white z-10">
+      <div className="absolute inset-0 bg-gradient-to-t from-[#070142]/90 via-[#070142]/45 to-transparent flex flex-col justify-end p-4 md:p-6 text-white z-10">
         <div className="font-display font-bold text-[15px] md:text-xl tracking-tight transition-transform duration-500 ease-out flex items-center flex-wrap gap-x-1 mb-1">
           {member.name.split(" ").map((word, i, arr) => {
-            if (i === arr.length - 1) {
-              return (
-                <span key={i} className="inline-block bg-emerald-900 text-white px-1.5 md:px-2 py-0.5 rounded -rotate-2 shadow-sm italic whitespace-nowrap">
-                  {word}
-                </span>
-              );
-            }
+              if (i === arr.length - 1) {
+                return (
+                  <span key={i} className="inline-block bg-[#f2cf07] text-[#070142] px-1.5 md:px-2 py-0.5 rounded -rotate-2 shadow-sm italic whitespace-nowrap">
+                    {word}
+                  </span>
+                );
+              }
             return <span key={i} className="whitespace-nowrap">{word}</span>;
           })}
         </div>
-        <span className="text-[9px] md:text-[11px] text-emerald-300 font-semibold tracking-wider uppercase mt-1 transition-transform duration-500 ease-out">
+        <span className="text-[9px] md:text-[11px] text-white/70 font-semibold tracking-wider uppercase mt-1 transition-transform duration-500 ease-out">
           {member.role}
         </span>
       </div>
@@ -113,7 +113,7 @@ const TeamCard = ({ member, idx, scrollX, containerWidth }: TeamCardProps) => {
 export default function TeamSection() {
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollX } = useScroll({ container: containerRef });
-  
+
   const [containerWidth, setContainerWidth] = useState(0);
   const [isMounted, setIsMounted] = useState(false);
 
@@ -142,7 +142,7 @@ export default function TeamSection() {
     const resizeObserver = new ResizeObserver(() => {
       handleResize();
     });
-    
+
     resizeObserver.observe(containerRef.current);
 
     window.addEventListener("resize", handleResize);
@@ -243,15 +243,15 @@ export default function TeamSection() {
         {/* Heading */}
         <div className="text-center mb-4 md:mb-6 max-w-2xl mx-auto px-6">
           <Badge
-            dotColor="bg-emerald-400"
+            dotColor="bg-[#f2cf07]"
             textColor="text-white"
-            className="border-transparent bg-emerald-900 mb-4 inline-flex"
+            className="border-transparent bg-[#070142] mb-4 inline-flex"
           >
-            Meet the People Behind HopeBridge
+            Meet the People Behind MBS
           </Badge>
           <AnimatedHeading as="h2" className="font-display text-3xl md:text-5xl font-medium tracking-tight text-neutral-900 leading-[1.2]">
             Our Super Squad of{" "}
-            <span className="bg-emerald-900 text-white px-3 py-0.5 inline-block -rotate-2">
+            <span className="bg-[#070142] text-white px-3 py-0.5 inline-block -rotate-2">
               Leaders
             </span>
           </AnimatedHeading>
@@ -266,9 +266,8 @@ export default function TeamSection() {
         onMouseLeave={handleMouseLeave}
         onMouseUp={handleMouseUp}
         onMouseMove={handleMouseMove}
-        className={`w-full overflow-x-auto scrollbar-none flex items-center gap-3 md:gap-5 py-8 md:py-12 relative z-20 ${
-          isDragging ? "cursor-grabbing" : "cursor-grab"
-        }`}
+        className={`w-full overflow-x-auto scrollbar-none flex items-center gap-3 md:gap-5 py-8 md:py-12 relative z-20 ${isDragging ? "cursor-grabbing" : "cursor-grab"
+          }`}
         style={{ scrollBehavior: isDragging ? "auto" : "smooth" }}
       >
         {/* Team Cards (Repeated for loop) */}
@@ -288,7 +287,7 @@ export default function TeamSection() {
             <div
               key={idx}
               style={{ width: cardWidth }}
-              className="relative aspect-[3/4] flex-shrink-0 rounded-[2rem] overflow-hidden bg-emerald-900 border-2 border-emerald-800 shadow-xl"
+              className="relative aspect-[3/4] flex-shrink-0 rounded-[2rem] overflow-hidden bg-[#070142] border-2 border-[#070142] shadow-xl"
             >
               <Image
                 src={member.image}
@@ -307,7 +306,7 @@ export default function TeamSection() {
         <div className="flex justify-center px-6 relative z-30">
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 rounded-full border border-emerald-900 bg-emerald-900 px-10 py-4 text-[0.95rem] font-bold text-white transition-all hover:bg-emerald-950 hover:border-emerald-950 hover:shadow-lg shadow-md uppercase tracking-wider"
+            className="inline-flex items-center gap-2 rounded-full border border-[#070142] bg-[#f2cf07] px-10 py-4 text-[0.95rem] font-bold text-[#070142] transition-all hover:bg-[#070142] hover:text-white hover:border-[#070142] hover:shadow-lg shadow-md uppercase tracking-wider"
           >
             Join Our Team <ArrowRight className="h-4 w-4" />
           </Link>

@@ -2,16 +2,16 @@ import Image from "next/image";
 
 const images = {
   main: {
-    src: "/images/about-education.jpg",
-    alt: "Children learning through education programs",
+    src: "/images/corporate_meeting.png",
+    alt: "Corporate meeting room at MBS",
   },
   bottomLeft: {
-    src: "/images/about-volunteers.jpg",
-    alt: "Volunteers helping community members",
+    src: "/images/corporate_compliance.png",
+    alt: "Corporate compliance documents and desk",
   },
   topRight: {
-    src: "/images/about-community.jpg",
-    alt: "Community members united for change",
+    src: "/images/business_consulting.png",
+    alt: "Consultancy and client advisory",
   },
 };
 
@@ -29,7 +29,7 @@ export default function AboutImageCollage() {
         />
       </div>
 
-      {/* Bottom-left — donations */}
+      {/* Bottom-left — compliance */}
       <div className="absolute bottom-0 left-0 z-20 h-[140px] w-[130px] overflow-hidden rounded-2xl shadow-xl ring-4 ring-white sm:h-[155px] sm:w-[145px]">
         <Image
           src={images.bottomLeft.src}

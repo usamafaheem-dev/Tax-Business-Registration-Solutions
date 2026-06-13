@@ -11,15 +11,15 @@ import AnimatedHeading from "@/components/ui/AnimatedHeading";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn about our story, mission, vision, core values, and the team behind HopeBridge Foundation.",
+    "Learn about our story, mission, vision, core values, and the team behind MBS.",
 };
 
 const extendedTeam = [
   ...aboutContent.team,
-  { name: "Sarah Ahmed", role: "Education Director", bio: "" },
-  { name: "David Chen", role: "Volunteer Coordinator", bio: "" },
-  { name: "Aisha Khan", role: "Women Empowerment Lead", bio: "" },
-  { name: "Michael Osei", role: "Operations Manager", bio: "" },
+  { name: "Sarah Ahmed", role: "Senior Tax Advisor", bio: "" },
+  { name: "David Chen", role: "Company Secretary", bio: "" },
+  { name: "Hamza Khan", role: "Intellectual Property Specialist", bio: "" },
+  { name: "Michael Osei", role: "Operations & Audits Manager", bio: "" },
 ];
 
 export default function AboutPage() {
@@ -49,61 +49,61 @@ export default function AboutPage() {
       `}</style>
 
       {/* Small Hero Section */}
-      <section className="relative w-full h-[35vh] min-h-[300px] max-h-[400px] bg-emerald-900 flex flex-col items-center justify-center pt-16 px-6 text-center shadow-md z-10">
-        <AnimatedHeading as="h1" className="font-display text-4xl sm:text-5xl md:text-6xl font-medium tracking-tight text-emerald-100 leading-[1.1]">
-          About <span className="inline-block bg-white text-emerald-900 px-3 py-1 rounded -rotate-2 font-bold mx-1 shadow-md">Us</span>
+      <section className="relative w-full h-[45vh] min-h-[380px] max-h-[500px] bg-[#070142] flex flex-col items-center justify-center pt-24 pb-8 px-6 text-center shadow-md z-10">
+        <AnimatedHeading as="h1" className="font-display text-4xl sm:text-5xl md:text-6xl font-medium tracking-tight text-white leading-[1.1]">
+          About <span className="inline-block bg-[#f2cf07] text-[#070142] px-3 py-1 rounded -rotate-2 font-bold mx-1 shadow-md">Us</span>
         </AnimatedHeading>
-        <p className="mt-4 sm:mt-6 text-base sm:text-lg text-emerald-50/90 max-w-2xl mx-auto">
+        <p className="mt-4 sm:mt-6 text-base sm:text-lg text-white/80 max-w-2xl mx-auto font-medium">
           Discover the passionate people and core principles driving our mission forward.
         </p>
       </section>
 
       {/* About Us Detail Section */}
       <section className="relative pt-8 pb-12 md:pt-12 md:pb-20 bg-white border-b border-neutral-200 overflow-hidden">
-        {/* Prominent Ambient Brand Green Glows */}
-        <div className="absolute left-[-10%] top-[10%] w-[400px] md:w-[600px] h-[400px] md:h-[600px] bg-emerald-500/20 rounded-full blur-[100px] md:blur-[140px] pointer-events-none" />
-        <div className="absolute right-[-10%] bottom-[10%] w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-lime-500/15 rounded-full blur-[100px] md:blur-[120px] pointer-events-none" />
+        {/* Ambient Blue Glowing Orbs */}
+        <div className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-[#070142]/40 blur-[120px] rounded-full pointer-events-none z-0" />
+        <div className="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-[#070142]/40 blur-[120px] rounded-full pointer-events-none z-0" />
 
         <div className="mx-auto max-w-[1300px] px-6 md:px-12 lg:px-16 relative z-10">
           <div className="grid lg:grid-cols-[1fr_1fr] gap-12 lg:gap-24 items-center">
-            
+
             {/* Left Content - Image Collage */}
             <div className="relative h-[350px] sm:h-[450px] w-full hidden md:block">
               {/* Dotted Arrow Decorative Element (Animated) */}
               <div className="absolute bottom-[0%] left-[-15%] z-20 opacity-60">
                 <svg width="200" height="150" viewBox="0 0 200 150" fill="none" stroke="#10b981" strokeWidth="2.5" strokeDasharray="8 8" className="animate-dash">
-                  <path d="M 10 100 Q 50 150 120 120 T 180 140" fill="transparent"/>
-                  <polygon points="180,140 170,130 165,145" fill="none" stroke="#10b981" strokeWidth="2.5"/>
+                  <path d="M 10 100 Q 50 150 120 120 T 180 140" fill="transparent" />
+                  <polygon points="180,140 170,130 165,145" fill="none" stroke="#10b981" strokeWidth="2.5" />
                 </svg>
               </div>
 
               {/* Dotted Arc Decorative Element (Animated) */}
               <div className="absolute top-[60%] right-[5%] z-20 opacity-60">
                 <svg width="150" height="150" viewBox="0 0 150 150" fill="none" stroke="#047857" strokeWidth="2.5" strokeDasharray="8 8" className="animate-dash">
-                  <path d="M 50 10 Q 150 50 100 140" fill="transparent"/>
+                  <path d="M 50 10 Q 150 50 100 140" fill="transparent" />
                 </svg>
               </div>
 
               {/* Tilted Left Image */}
               <div className="absolute left-[5%] top-[15%] w-[55%] h-[70%] rounded-[2rem] overflow-hidden shadow-2xl -rotate-6 z-10 bg-neutral-200">
-                <Image src="/images/about-community.webp" alt="Our Community" fill sizes="(max-width: 768px) 100vw, 300px" className="object-cover" />
+                <Image src="/images/corporate_meeting.png" alt="Corporate Meeting" fill sizes="(max-width: 768px) 100vw, 300px" className="object-cover" />
               </div>
 
               {/* Right Floating Image */}
               <div className="absolute right-[10%] top-[5%] w-[45%] h-[50%] rounded-[2rem] overflow-hidden shadow-xl z-20 border-4 border-white bg-neutral-200">
-                <Image src="/images/about-education.jpg" alt="Online Learning" fill sizes="(max-width: 768px) 100vw, 250px" className="object-cover" />
+                <Image src="/images/corporate_compliance.png" alt="Corporate Compliance" fill sizes="(max-width: 768px) 100vw, 250px" className="object-cover" />
               </div>
 
               {/* Floating Badge */}
               <div className="absolute bottom-[5%] left-[50%] z-30 transform -translate-x-1/2 w-max max-w-[90%]">
-                <div className="bg-emerald-900 text-white px-6 py-4 md:px-8 md:py-5 rounded-2xl shadow-xl flex items-center gap-3 md:gap-4 relative overflow-hidden border-2 border-neutral-900">
-                  <div className="absolute bottom-0 right-0 w-6 h-6 bg-emerald-700 rounded-tl-lg" style={{ clipPath: "polygon(100% 0, 0% 100%, 100% 100%)" }} />
+                <div className="bg-[#070142] text-white px-6 py-4 md:px-8 md:py-5 rounded-2xl shadow-xl flex items-center gap-3 md:gap-4 relative overflow-hidden border-2 border-neutral-900">
+                  <div className="absolute bottom-0 right-0 w-6 h-6 bg-[#070142] rounded-tl-lg" style={{ clipPath: "polygon(100% 0, 0% 100%, 100% 100%)" }} />
                   <div className="absolute bottom-[-2px] right-[-2px] w-6 h-6 bg-white rounded-tl-lg" style={{ clipPath: "polygon(0 0, 0% 100%, 100% 0%)" }} />
-                  
+
                   <span className="font-display text-3xl md:text-4xl font-extrabold tracking-tighter text-[#ccff00]">10K+</span>
                   <div className="flex flex-col text-[11px] md:text-sm font-semibold leading-tight tracking-wider uppercase opacity-90">
-                    <span>Lives</span>
-                    <span>Impacted</span>
+                    <span>Satisfied</span>
+                    <span>Clients</span>
                   </div>
                 </div>
               </div>
@@ -112,53 +112,53 @@ export default function AboutPage() {
             {/* Right Content - Text & Features */}
             <div className="max-w-xl mx-auto lg:mx-0 w-full">
               <div className="mb-6 text-center lg:text-left">
-                <Badge dotColor="bg-emerald-500" textColor="text-white" className="border-transparent bg-emerald-900 mb-4 inline-flex uppercase tracking-widest text-[0.8rem] font-bold shadow-sm">
+                <Badge dotColor="bg-[#070142]" textColor="text-[#070142]" className="border-transparent bg-[#f2cf07] mb-4 inline-flex uppercase tracking-widest text-[0.8rem] font-bold shadow-sm">
                   Get To Know Us
                 </Badge>
                 <AnimatedHeading as="h2" className="font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-neutral-900 leading-[1.15] tracking-tight">
-                  Driving real change in the <span className="inline-block bg-emerald-900 text-white px-3 py-1 rounded -rotate-2 shadow-sm italic mx-1">Community</span> from anywhere
+                  Powering business growth with seamless <span className="inline-block bg-[#070142] text-white px-3 py-1 rounded -rotate-2 shadow-sm italic mx-1">Compliance</span> from anywhere
                 </AnimatedHeading>
               </div>
-              
+
               <p className="text-neutral-500 mb-10 leading-relaxed text-[15px] font-medium text-center lg:text-left">
-                {aboutContent.vision} We are dedicated to providing sustainable solutions for those in need, operating with transparency, compassion, and a commitment to positive impact.
+                {aboutContent.vision} We are dedicated to providing reliable solutions for your business, operating with complete transparency, professionalism, and a commitment to your success.
               </p>
-              
+
               <div className="grid grid-cols-2 sm:grid-cols-2 gap-y-6 sm:gap-y-8 gap-x-4 sm:gap-x-6 mb-12">
                 {/* Our Story */}
                 <div className="flex items-center gap-3 sm:gap-4">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-600 shrink-0 shadow-sm border border-emerald-100">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-[#070142]/5 flex items-center justify-center text-[#070142] shrink-0 shadow-sm border border-[#070142]/10">
                     <BookOpen className="w-5 h-5 sm:w-6 sm:h-6" />
                   </div>
                   <span className="font-bold text-neutral-800 text-[13px] sm:text-[15px]">Our Story</span>
                 </div>
                 {/* Mission */}
                 <div className="flex items-center gap-3 sm:gap-4">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-600 shrink-0 shadow-sm border border-emerald-100">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-[#070142]/5 flex items-center justify-center text-[#070142] shrink-0 shadow-sm border border-[#070142]/10">
                     <Target className="w-5 h-5 sm:w-6 sm:h-6" />
                   </div>
                   <span className="font-bold text-neutral-800 text-[13px] sm:text-[15px]">Mission</span>
                 </div>
                 {/* Vision */}
                 <div className="flex items-center gap-3 sm:gap-4">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-600 shrink-0 shadow-sm border border-emerald-100">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-[#070142]/5 flex items-center justify-center text-[#070142] shrink-0 shadow-sm border border-[#070142]/10">
                     <Globe className="w-5 h-5 sm:w-6 sm:h-6" />
                   </div>
                   <span className="font-bold text-neutral-800 text-[13px] sm:text-[15px]">Vision</span>
                 </div>
                 {/* Core Values */}
                 <div className="flex items-center gap-3 sm:gap-4">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-600 shrink-0 shadow-sm border border-emerald-100">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-[#070142]/5 flex items-center justify-center text-[#070142] shrink-0 shadow-sm border border-[#070142]/10">
                     <Heart className="w-5 h-5 sm:w-6 sm:h-6" />
                   </div>
                   <span className="font-bold text-neutral-800 text-[13px] sm:text-[15px]">Core Values</span>
                 </div>
               </div>
-              
+
               <div className="text-center lg:text-left">
                 <Link
                   href="/services"
-                  className="inline-flex items-center justify-center rounded-full bg-[#1b3b30] px-8 py-3.5 text-[0.95rem] font-bold text-white transition-all hover:bg-[#122820] shadow-md uppercase tracking-wider"
+                  className="inline-flex items-center justify-center rounded-full border-2 border-[#070142] bg-[#f2cf07] px-8 py-3.5 text-[0.95rem] font-bold text-[#070142] transition-all hover:bg-[#070142] hover:text-white hover:border-[#f2cf07] shadow-md uppercase tracking-wider"
                 >
                   Discover More
                 </Link>

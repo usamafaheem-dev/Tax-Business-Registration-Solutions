@@ -67,25 +67,25 @@ export default function OurStoryTimeline() {
   const Icon = iconMap[current.icon];
 
   return (
-    <section className="relative overflow-hidden border-t border-emerald-100/60 bg-white py-20 md:py-28">
+    <section className="relative overflow-hidden border-t border-[#070142]/10/60 bg-white py-20 md:py-28">
       <div className="pointer-events-none absolute inset-0" aria-hidden="true">
-        <div className="absolute -left-16 top-10 h-64 w-64 rounded-full bg-emerald-400/25 blur-3xl" />
-        <div className="absolute right-0 top-20 h-48 w-48 rounded-full bg-green-300/20 blur-3xl" />
-        <div className="absolute bottom-10 left-1/3 h-40 w-40 rounded-full bg-emerald-500/15 blur-3xl" />
+        <div className="absolute -left-16 top-10 h-64 w-64 rounded-full bg-[#070142]/50/25 blur-3xl" />
+        <div className="absolute right-0 top-20 h-48 w-48 rounded-full bg-[#070142]/30/20 blur-3xl" />
+        <div className="absolute bottom-10 left-1/3 h-40 w-40 rounded-full bg-[#070142]/80/15 blur-3xl" />
       </div>
 
       <div className="relative z-10 mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
           {/* Left */}
           <div>
-            <div className="mb-5 inline-flex w-fit items-center gap-2.5 rounded-full border border-emerald-200/70 bg-emerald-50 px-4 py-2">
+            <div className="mb-5 inline-flex w-fit items-center gap-2.5 rounded-full border border-[#070142]/20/70 bg-[#070142]/5 px-4 py-2">
               <span className="relative flex h-2.5 w-2.5">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60" />
-                <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500" />
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#070142]/50 opacity-60" />
+                <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-[#070142]/80" />
               </span>
-              <span className="text-sm font-semibold text-emerald-800">Our Journey</span>
-              <span className="h-3.5 w-px bg-emerald-300" />
-              <span key={active} className="story-spotlight text-sm font-bold text-emerald-600">
+              <span className="text-sm font-semibold text-[#070142]">Our Journey</span>
+              <span className="h-3.5 w-px bg-[#070142]/30" />
+              <span key={active} className="story-spotlight text-sm font-bold text-[#070142]">
                 {current.date}
               </span>
             </div>
@@ -99,16 +99,16 @@ export default function OurStoryTimeline() {
 
             <div
               key={`card-${active}`}
-              className={`story-spotlight mt-7 rounded-2xl border border-emerald-100/80 bg-gradient-to-br from-emerald-50/80 to-white p-5 ${
+              className={`story-spotlight mt-7 rounded-2xl border border-[#070142]/10/80 bg-gradient-to-br from-[#070142]/5/80 to-white p-5 ${
                 dir === 1 ? "story-spotlight-next" : "story-spotlight-prev"
               }`}
             >
               <div className="flex items-start gap-4">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-emerald-600 shadow-sm">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#070142] shadow-sm">
                   <Icon className="h-5 w-5 text-white" />
                 </div>
                 <div>
-                  <span className="text-xs font-bold uppercase tracking-widest text-emerald-600">
+                  <span className="text-xs font-bold uppercase tracking-widest text-[#070142]">
                     {current.date}
                   </span>
                   <h3 className="mt-0.5 font-display text-lg font-bold text-[#242021]">
@@ -126,7 +126,7 @@ export default function OurStoryTimeline() {
                 type="button"
                 onClick={prevSlide}
                 aria-label="Previous slide"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-600 text-white shadow-sm transition hover:bg-emerald-700 active:scale-95"
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-[#f2cf07] text-[#070142] shadow-sm transition hover:bg-[#070142] hover:text-white active:scale-95"
               >
                 <ChevronLeft className="h-5 w-5" />
               </button>
@@ -134,11 +134,11 @@ export default function OurStoryTimeline() {
                 type="button"
                 onClick={nextSlide}
                 aria-label="Next slide"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-600 text-white shadow-sm transition hover:bg-emerald-700 active:scale-95"
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-[#f2cf07] text-[#070142] shadow-sm transition hover:bg-[#070142] hover:text-white active:scale-95"
               >
                 <ChevronRight className="h-5 w-5" />
               </button>
-              <span className="ml-1 text-sm font-semibold text-emerald-700">
+              <span className="ml-1 text-sm font-semibold text-[#070142]">
                 {String(active + 1).padStart(2, "0")} / {String(TOTAL).padStart(2, "0")}
               </span>
             </div>
@@ -181,7 +181,7 @@ export default function OurStoryTimeline() {
                 key={`cap-${active}`}
                 className="story-spotlight pointer-events-none absolute bottom-0 left-0 right-0 z-[4] p-6"
               >
-                <span className="inline-flex rounded-full bg-emerald-600 px-3 py-1 text-xs font-bold text-white">
+                <span className="inline-flex rounded-full bg-[#070142] px-3 py-1 text-xs font-bold text-white">
                   {current.date}
                 </span>
                 <p className="mt-2 font-display text-xl font-bold text-white sm:text-2xl">
@@ -201,8 +201,8 @@ export default function OurStoryTimeline() {
               onClick={() => changeSlide(i, i >= active ? 1 : -1)}
               className={`rounded-full px-4 py-2 text-sm font-semibold transition-all duration-300 ${
                 i === active
-                  ? "bg-emerald-600 text-white shadow-md shadow-emerald-200"
-                  : "bg-emerald-50 text-emerald-700 hover:bg-emerald-100"
+                  ? "bg-[#070142] text-white shadow-md shadow-emerald-200"
+                  : "bg-[#070142]/5 text-[#070142] hover:bg-[#070142]/10"
               }`}
             >
               {item.date}
@@ -210,9 +210,9 @@ export default function OurStoryTimeline() {
           ))}
         </div>
 
-        <div className="mx-auto mt-5 h-1 max-w-md overflow-hidden rounded-full bg-emerald-100">
+        <div className="mx-auto mt-5 h-1 max-w-md overflow-hidden rounded-full bg-[#070142]/10">
           <div
-            className="h-full rounded-full bg-emerald-600 transition-all duration-700 ease-out"
+            className="h-full rounded-full bg-[#070142] transition-all duration-700 ease-out"
             style={{ width: `${((active + 1) / TOTAL) * 100}%` }}
           />
         </div>

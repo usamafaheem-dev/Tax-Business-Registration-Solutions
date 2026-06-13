@@ -1,12 +1,12 @@
 export const siteConfig = {
-  name: "HopeBridge Foundation",
-  tagline: "Building stronger communities together",
+  name: "My Business Solution",
+  tagline: "Complete Tax & Business Registration Solutions",
   description:
-    "A trusted NGO dedicated to education, healthcare, women empowerment, youth training, and community welfare across underserved regions.",
-  email: "contact@hopebridge.org",
-  phone: "+92 300 1234567",
-  whatsapp: "+923001234567",
-  address: "123 Community Center Road, Karachi, Pakistan",
+    "Helping Individuals, Startups & Businesses with Tax Filing, Company Registration, Trademark Protection, and Regulatory Compliance Across Pakistan.",
+  email: "info@mybusinesssolution.com.pk",
+  phone: "03147761897",
+  whatsapp: "03332699175",
+  address: "Hyderabad, Pakistan",
   social: {
     facebook: "https://facebook.com",
     twitter: "https://twitter.com",

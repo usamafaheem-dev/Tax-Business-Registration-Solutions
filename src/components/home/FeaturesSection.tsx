@@ -7,24 +7,24 @@ import { ShieldCheck, Users, Globe2 } from "lucide-react";
 const features = [
   {
     icon: ShieldCheck,
-    title: "Transparent & Trusted Giving",
-    description: "Every donation is tracked and reported. We ensure 100% transparency in all our projects.",
+    title: "Transparent & Trusted Advisory",
+    description: "Every filing is carefully documented. We ensure 100% compliance transparency in all our consultations.",
     color: "text-blue-600",
     bgColor: "bg-blue-100",
   },
   {
     icon: Users,
-    title: "Trusted Network of Partners",
-    description: "We collaborate with local experts and international organizations for maximum impact.",
+    title: "Expert Network of Advisors",
+    description: "We collaborate with legal, financial, and corporate experts to provide the best solutions.",
     color: "text-purple-600",
     bgColor: "bg-purple-100",
   },
   {
     icon: Globe2,
-    title: "Global Movement",
-    description: "Be part of a worldwide community dedicated to bringing hope and creating lasting change.",
-    color: "text-emerald-600",
-    bgColor: "bg-emerald-100",
+    title: "National Business Growth",
+    description: "Be part of a growing ecosystem of startup and corporate leaders scaling their brands.",
+    color: "text-[#070142]",
+    bgColor: "bg-[#070142]/10",
   },
 ];
 
@@ -43,8 +43,18 @@ const itemVariants = {
 
 export default function FeaturesSection() {
   return (
-    <section className="bg-white py-16 md:py-24">
-      <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+    <section className="relative overflow-hidden bg-white py-16 md:py-24">
+      {/* Blurry Blue Orbs in Background */}
+      <div className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-[#070142]/40 blur-[120px] rounded-full pointer-events-none z-0" />
+      <div className="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-[#070142]/40 blur-[120px] rounded-full pointer-events-none z-0" />
+
+      {/* Scattered Decorative Dots */}
+      <div className="absolute left-[10%] top-[20%] h-2.5 w-2.5 rounded-full bg-[#f2cf07] opacity-60 z-0 pointer-events-none" />
+      <div className="absolute right-[15%] top-[10%] h-3 w-3 rounded-full bg-[#070142] opacity-40 z-0 pointer-events-none" />
+      <div className="absolute left-[20%] bottom-[15%] h-2 w-2 rounded-full bg-[#070142] opacity-50 z-0 pointer-events-none" />
+      <div className="absolute right-[10%] bottom-[20%] h-3.5 w-3.5 rounded-full bg-[#f2cf07] opacity-70 z-0 pointer-events-none" />
+
+      <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10 relative z-10">
         <motion.div
           variants={containerVariants}
           initial="hidden"

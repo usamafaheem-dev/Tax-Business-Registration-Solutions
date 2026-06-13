@@ -13,7 +13,15 @@ const extendedTestimonials = testimonials.map((t, index) => ({
   ...t,
   id: index,
   rating: 5,
-  avatar: ["/images/about-education.jpg", "/images/about-community.webp", "/images/about-volunteers.jpg"][index % 3],
+  avatar: [
+    "/images/team-1.webp",
+    "/images/team-2.webp",
+    "/images/team-3.webp",
+    "/images/team-4.webp",
+    "/images/team-5.webp",
+    "/images/team-6.webp",
+    "/images/team-7.webp"
+  ][index % 7],
 }));
 
 export default function TestimonialsSection() {
@@ -69,8 +77,8 @@ export default function TestimonialsSection() {
   return (
     <section ref={sectionRef} className="relative overflow-hidden bg-[#f5f4ef] pt-8 pb-12 md:pt-12 md:pb-20">
       {/* Soft Ambient Brand Green Glows */}
-      <div className="absolute left-[-15%] top-[15%] w-[500px] h-[500px] bg-emerald-500/[0.20] rounded-full blur-[110px] pointer-events-none" />
-      <div className="absolute right-[-15%] bottom-[15%] w-[500px] h-[500px] bg-emerald-500/[0.15] rounded-full blur-[110px] pointer-events-none" />
+      <div className="absolute left-[-15%] top-[15%] w-[500px] h-[500px] bg-[#070142]/80/[0.20] rounded-full blur-[110px] pointer-events-none" />
+      <div className="absolute right-[-15%] bottom-[15%] w-[500px] h-[500px] bg-[#070142]/80/[0.15] rounded-full blur-[110px] pointer-events-none" />
 
       <div className="mx-auto max-w-[1200px] px-6 lg:px-12 relative z-10">
         <motion.div
@@ -82,16 +90,16 @@ export default function TestimonialsSection() {
           {/* Left side: Heading and navigation */}
           <motion.div variants={itemVariants} className="flex flex-col justify-center items-center lg:items-start text-center lg:text-left">
             <div className="space-y-6 flex flex-col items-center lg:items-start w-full">
-              <Badge dotColor="bg-emerald-500" textColor="text-white" className="border-transparent bg-emerald-900 mb-2">
+              <Badge dotColor="bg-[#070142]" textColor="text-[#070142]" className="border-transparent bg-[#f2cf07] mb-2">
                 Testimonials
               </Badge>
 
               <AnimatedHeading as="h2" className="font-display text-4xl md:text-[3.5rem] font-medium leading-[1.1] tracking-tight text-neutral-900">
-                Stories from Our <span className="bg-emerald-900 text-white px-3 py-1 inline-block -rotate-2 mx-1">Community</span>
+                Stories from Our <span className="bg-[#070142] text-white px-3 py-1 inline-block -rotate-2 mx-1">Clients</span>
               </AnimatedHeading>
 
               <p className="text-lg leading-relaxed text-neutral-600 max-w-lg">
-                Don't just take our word for it. See what our volunteers and beneficiaries have to say about our impact.
+                Don't just take our word for it. See what our startup founders and business clients have to say about MBS.
               </p>
 
               <div className="flex items-center gap-3 pt-4">
@@ -99,9 +107,8 @@ export default function TestimonialsSection() {
                   <button
                     key={index}
                     onClick={() => setActiveIndex(index)}
-                    className={`h-2.5 rounded-full transition-all duration-300 ${
-                      activeIndex === index ? "w-10 bg-emerald-900" : "w-3 bg-neutral-300 hover:bg-neutral-400"
-                    }`}
+                    className={`h-2.5 rounded-full transition-all duration-300 ${activeIndex === index ? "w-10 bg-[#070142]" : "w-3 bg-neutral-300 hover:bg-neutral-400"
+                      }`}
                     aria-label={`View testimonial ${index + 1}`}
                   />
                 ))}
@@ -125,10 +132,10 @@ export default function TestimonialsSection() {
                 transition={{ duration: 0.5, ease: "easeInOut" }}
                 style={{ zIndex: activeIndex === index ? 10 : 0 }}
               >
-                <div className="bg-emerald-900 shadow-2xl shadow-emerald-900/20 rounded-[2rem] p-5 sm:p-6 md:p-10 h-auto min-h-full flex flex-col relative overflow-hidden group">
+                <div className="bg-[#070142] shadow-2xl shadow-emerald-900/20 rounded-[2rem] p-5 sm:p-6 md:p-10 h-auto min-h-full flex flex-col relative overflow-hidden group">
                   {/* Watermark Quote Icon */}
-                  <Quote className="absolute -bottom-6 -right-6 h-32 w-32 text-emerald-800/50 rotate-12 transition-transform duration-700 group-hover:-rotate-12 group-hover:scale-110" />
-                  
+                  <Quote className="absolute -bottom-6 -right-6 h-32 w-32 text-[#070142]/50 rotate-12 transition-transform duration-700 group-hover:-rotate-12 group-hover:scale-110" />
+
                   <div className="relative z-10 mb-6 flex gap-1">
                     {Array(testimonial.rating)
                       .fill(0)
@@ -140,17 +147,17 @@ export default function TestimonialsSection() {
                   <div className="relative z-10 mb-6 flex-1">
                     <p className="text-[14px] sm:text-[15px] md:text-[1.15rem] font-medium leading-relaxed text-white/95">
                       "{testimonial.quoteStart}
-                      <span className="bg-white text-emerald-900 px-2 py-0.5 inline-block -rotate-2 mx-1 font-bold shadow-sm">
+                      <span className="bg-white text-[#070142] px-2 py-0.5 inline-block -rotate-2 mx-1 font-bold shadow-sm">
                         {testimonial.highlight}
                       </span>
                       {testimonial.quoteEnd}"
                     </p>
                   </div>
 
-                  <div className="relative z-10 w-full h-px bg-emerald-800/80 mb-6" />
+                  <div className="relative z-10 w-full h-px bg-[#070142]/80 mb-6" />
 
                   <div className="relative z-10 flex items-center gap-4">
-                    <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full border-2 border-emerald-400 shadow-lg">
+                    <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full border-2 border-[#070142]/50 shadow-lg">
                       <Image
                         src={testimonial.avatar}
                         alt={testimonial.name}
@@ -161,7 +168,7 @@ export default function TestimonialsSection() {
                     </div>
                     <div>
                       <h3 className="font-display text-lg font-bold text-white">{testimonial.name}</h3>
-                      <p className="text-sm font-medium text-emerald-400 mt-0.5">
+                      <p className="text-sm font-medium text-white/50 mt-0.5">
                         {testimonial.role}
                       </p>
                     </div>
@@ -171,8 +178,8 @@ export default function TestimonialsSection() {
             ))}
 
             {/* Decorative elements */}
-            <div className="absolute -bottom-6 -left-6 h-32 w-32 rounded-3xl bg-emerald-900/5 -z-10" />
-            <div className="absolute -top-6 -right-6 h-32 w-32 rounded-full bg-emerald-900/5 -z-10" />
+            <div className="absolute -bottom-6 -left-6 h-32 w-32 rounded-3xl bg-[#070142]/5 -z-10" />
+            <div className="absolute -top-6 -right-6 h-32 w-32 rounded-full bg-[#070142]/5 -z-10" />
           </motion.div>
         </motion.div>
       </div>

@@ -78,30 +78,30 @@ export default function ContactPageForm() {
 
   return (
     <div className="relative w-full max-w-5xl mx-auto py-6 md:py-12 px-4 flex flex-col md:flex-row items-center justify-center min-h-[500px] font-sans">
-      
+
       {/* Left Side: Contact Info Floating Card */}
-      <div className="w-full md:w-[320px] bg-emerald-900 rounded-2xl md:rounded-[2rem] p-6 sm:p-8 text-white z-20 shadow-[0_20px_50px_rgba(4,120,87,0.3)] relative md:-mr-8 mb-6 md:mb-0">
+      <div className="w-full md:w-[320px] bg-[#070142] rounded-2xl md:rounded-[2rem] p-6 sm:p-8 text-white z-20 shadow-[0_20px_50px_rgba(4,120,87,0.3)] relative md:-mr-8 mb-6 md:mb-0">
         <h3 className="font-display text-3xl font-bold mb-8">
-          Contact <span className="inline-block bg-white text-emerald-900 px-3 py-1 rounded -rotate-3 shadow-sm italic tracking-wide ml-1">
+          Contact <span className="inline-block bg-white text-[#070142] px-3 py-1 rounded -rotate-3 shadow-sm italic tracking-wide ml-1">
             Info
           </span>
         </h3>
-        
+
         <div className="flex flex-col gap-5">
           <div className="flex items-center gap-4 group">
             <div className="p-2 bg-white/5 rounded-full group-hover:bg-white/10 transition-colors">
-              <Phone className="w-4 h-4 text-emerald-300" />
+              <Phone className="w-4 h-4 text-white/70" />
             </div>
-            <a href={`tel:${siteConfig.phone}`} className="text-sm font-medium italic hover:text-emerald-200 transition-colors">
+            <a href={`tel:${siteConfig.phone}`} className="text-sm font-medium italic hover:text-white/70 transition-colors">
               {siteConfig.phone}
             </a>
           </div>
-          
+
           <div className="flex items-center gap-4 group">
             <div className="p-2 bg-white/5 rounded-full group-hover:bg-white/10 transition-colors">
-              <Mail className="w-4 h-4 text-emerald-300" />
+              <Mail className="w-4 h-4 text-white/70" />
             </div>
-            <a href={`mailto:${siteConfig.email}`} className="text-sm font-medium italic hover:text-emerald-200 transition-colors">
+            <a href={`mailto:${siteConfig.email}`} className="text-sm font-medium italic hover:text-white/70 transition-colors">
               {siteConfig.email}
             </a>
           </div>
@@ -109,12 +109,12 @@ export default function ContactPageForm() {
 
         <div className="flex items-center gap-4 mt-12">
           {Object.entries(siteConfig.social).map(([platform, url]) => (
-            <a 
-              key={platform} 
-              href={url} 
-              target="_blank" 
-              rel="noreferrer" 
-              className="relative flex items-center justify-center w-11 h-11 rounded-full text-white hover:text-emerald-200 hover:-translate-y-1 transition-all group" 
+            <a
+              key={platform}
+              href={url}
+              target="_blank"
+              rel="noreferrer"
+              className="relative flex items-center justify-center w-11 h-11 rounded-full text-white hover:text-white/70 hover:-translate-y-1 transition-all group"
               title={platform}
             >
               {/* Animated White Border */}
@@ -129,19 +129,20 @@ export default function ContactPageForm() {
 
       {/* Right Side: Form Card with Animated Dotted Border */}
       <div className="w-full md:w-[550px] bg-neutral-900/5 backdrop-blur-xl rounded-2xl md:rounded-[2rem] p-6 sm:p-8 md:p-10 md:pl-20 shadow-xl border border-white/40 z-10 relative overflow-hidden group">
-        
+
         {/* Animated Dotted Border Overlay */}
-        <div className="absolute inset-0 border-2 border-dashed border-emerald-500/80 rounded-sm pointer-events-none opacity-80" 
-             style={{ 
-               backgroundImage: `linear-gradient(90deg, #10b981 50%, transparent 50%), linear-gradient(90deg, #10b981 50%, transparent 50%), linear-gradient(0deg, #10b981 50%, transparent 50%), linear-gradient(0deg, #10b981 50%, transparent 50%)`,
-               backgroundRepeat: `repeat-x, repeat-x, repeat-y, repeat-y`,
-               backgroundSize: `12px 2px, 12px 2px, 2px 12px, 2px 12px`,
-               backgroundPosition: `0% 0%, 100% 100%, 0% 100%, 100% 0px`,
-               animation: `border-dance 20s infinite linear`,
-               border: 'none'
-             }} 
+        <div className="absolute inset-0 border-2 border-dashed border-[#070142]/80/80 rounded-sm pointer-events-none opacity-80"
+          style={{
+            backgroundImage: `linear-gradient(90deg, #070142 50%, transparent 50%), linear-gradient(90deg, #070142 50%, transparent 50%), linear-gradient(0deg, #070142 50%, transparent 50%), linear-gradient(0deg, #070142 50%, transparent 50%)`,
+            backgroundRepeat: `repeat-x, repeat-x, repeat-y, repeat-y`,
+            backgroundSize: `12px 2px, 12px 2px, 2px 12px, 2px 12px`,
+            backgroundPosition: `0% 0%, 100% 100%, 0% 100%, 100% 0px`,
+            animation: `border-dance 20s infinite linear`,
+            border: 'none'
+          }}
         />
-        <style dangerouslySetInnerHTML={{__html: `
+        <style dangerouslySetInnerHTML={{
+          __html: `
           @keyframes border-dance {
             0% {
               background-position: 0% 0%, 100% 100%, 0% 100%, 100% 0px;
@@ -153,13 +154,13 @@ export default function ContactPageForm() {
         `}} />
 
         <AnimatedHeading as="h2" className="font-display text-2xl md:text-3xl font-medium text-neutral-900 mb-8 tracking-tight">
-          Have Any <span className="inline-block bg-emerald-900 text-white px-3 py-1 rounded -rotate-2 shadow-sm italic ml-1">Question?</span>
+          Have Any <span className="inline-block bg-[#070142] text-white px-3 py-1 rounded -rotate-2 shadow-sm italic ml-1">Question?</span>
         </AnimatedHeading>
 
         {submitted ? (
           <div className="flex flex-col items-start justify-center py-6">
-            <div className="h-12 w-12 bg-emerald-50 rounded-full flex items-center justify-center mb-4 border border-emerald-100 animate-bounce">
-              <CheckCircle className="h-5 w-5 text-emerald-600" />
+            <div className="h-12 w-12 bg-[#070142]/5 rounded-full flex items-center justify-center mb-4 border border-[#070142]/10 animate-bounce">
+              <CheckCircle className="h-5 w-5 text-[#070142]" />
             </div>
             <h3 className="font-display text-xl font-bold text-neutral-900 mb-2">Message Sent!</h3>
             <p className="text-neutral-600 text-sm mb-6 max-w-md leading-relaxed">
@@ -168,14 +169,14 @@ export default function ContactPageForm() {
             <button
               type="button"
               onClick={() => setSubmitted(false)}
-              className="border-2 border-emerald-900 text-emerald-900 hover:bg-emerald-900 hover:text-white px-5 py-2 text-sm font-bold transition-all rounded-full font-sans"
+              className="border-2 border-[#070142] text-[#070142] hover:bg-[#070142] hover:text-white px-5 py-2 text-sm font-bold transition-all rounded-full font-sans"
             >
               Submit Another Message
             </button>
           </div>
         ) : (
           <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-6 relative z-20">
-            
+
             {/* Full Name */}
             <div className="relative">
               <input
@@ -183,7 +184,7 @@ export default function ContactPageForm() {
                 name="name"
                 type="text"
                 placeholder="Full name"
-                className={`w-full bg-transparent border-b-2 ${errors.name ? 'border-red-500' : 'border-emerald-900/30'} pb-2 text-[14px] font-medium text-neutral-900 placeholder:text-neutral-500 outline-none focus:border-emerald-600 transition-colors`}
+                className={`w-full bg-transparent border-b-2 ${errors.name ? 'border-red-500' : 'border-[#070142]/30'} pb-2 text-[14px] font-medium text-neutral-900 placeholder:text-neutral-500 outline-none focus:border-[#070142] transition-colors`}
               />
             </div>
 
@@ -195,7 +196,7 @@ export default function ContactPageForm() {
                   name="email"
                   type="email"
                   placeholder="Email"
-                  className={`w-full bg-transparent border-b-2 ${errors.email ? 'border-red-500' : 'border-emerald-900/30'} pb-2 text-[14px] font-medium text-neutral-900 placeholder:text-neutral-500 outline-none focus:border-emerald-600 transition-colors`}
+                  className={`w-full bg-transparent border-b-2 ${errors.email ? 'border-red-500' : 'border-[#070142]/30'} pb-2 text-[14px] font-medium text-neutral-900 placeholder:text-neutral-500 outline-none focus:border-[#070142] transition-colors`}
                 />
               </div>
 
@@ -205,7 +206,7 @@ export default function ContactPageForm() {
                   name="phone"
                   type="tel"
                   placeholder="Phone"
-                  className={`w-full bg-transparent border-b-2 ${errors.phone ? 'border-red-500' : 'border-emerald-900/30'} pb-2 text-[14px] font-medium text-neutral-900 placeholder:text-neutral-500 outline-none focus:border-emerald-600 transition-colors`}
+                  className={`w-full bg-transparent border-b-2 ${errors.phone ? 'border-red-500' : 'border-[#070142]/30'} pb-2 text-[14px] font-medium text-neutral-900 placeholder:text-neutral-500 outline-none focus:border-[#070142] transition-colors`}
                 />
               </div>
             </div>
@@ -217,7 +218,7 @@ export default function ContactPageForm() {
                 name="message"
                 rows={3}
                 placeholder="Write your message here....."
-                className={`w-full bg-transparent border-b-2 ${errors.message ? 'border-red-500' : 'border-emerald-900/30'} pb-2 text-[14px] font-medium text-neutral-900 placeholder:text-neutral-500 outline-none focus:border-emerald-600 transition-colors resize-none`}
+                className={`w-full bg-transparent border-b-2 ${errors.message ? 'border-red-500' : 'border-[#070142]/30'} pb-2 text-[14px] font-medium text-neutral-900 placeholder:text-neutral-500 outline-none focus:border-[#070142] transition-colors resize-none`}
               />
             </div>
 
@@ -226,7 +227,7 @@ export default function ContactPageForm() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="bg-transparent border-2 border-emerald-900 text-emerald-900 hover:bg-emerald-900 hover:text-white disabled:opacity-50 disabled:cursor-not-allowed font-bold text-[13px] md:text-[14px] px-6 py-2.5 transition-all rounded-full flex items-center justify-center gap-2 uppercase tracking-wide w-full md:w-max shadow-sm hover:shadow-md"
+                className="bg-transparent border-2 border-[#070142] text-[#070142] hover:bg-[#070142] hover:text-white hover:text-[#070142] disabled:opacity-50 disabled:cursor-not-allowed font-bold text-[13px] md:text-[14px] px-6 py-2.5 transition-all rounded-full flex items-center justify-center gap-2 uppercase tracking-wide w-full md:w-max shadow-sm hover:shadow-md"
               >
                 <span>{isSubmitting ? "Sending..." : "Submit Message"}</span>
               </button>

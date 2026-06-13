@@ -32,56 +32,48 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
   if (!post) notFound();
 
-  const today = new Date().toLocaleDateString("en-US", {
-    day: "numeric",
-    month: "long",
-    year: "numeric"
-  });
-
   const recentBlogs = blogPosts.filter((p) => p.slug !== slug).slice(0, 3);
-  const categories = ["Education", "Community", "Healthcare", "Empowerment"];
+  const categories = ["Taxation", "Company Registration", "Trademark", "Compliance"];
 
   return (
     <article className="min-h-screen bg-[#f5f4ef] relative overflow-hidden">
-      
+
       {/* Small Hero Section */}
-      <section className="relative w-full h-[35vh] min-h-[300px] max-h-[400px] bg-emerald-900 flex flex-col items-center justify-center pt-16 px-6 text-center shadow-md z-10">
-        <AnimatedHeading as="h2" className="font-display text-4xl sm:text-5xl md:text-6xl font-medium tracking-tight text-emerald-100 leading-[1.1]">
-          Exploring Our Latest <span className="inline-block bg-white text-emerald-900 px-3 py-1 rounded -rotate-2 font-bold mx-1 shadow-md">Stories</span>
+      <section className="relative w-full h-[45vh] min-h-[380px] max-h-[500px] bg-[#070142] flex flex-col items-center justify-center pt-24 pb-8 px-6 text-center shadow-md z-10">
+        <AnimatedHeading as="h2" className="font-display text-4xl sm:text-5xl md:text-6xl font-medium tracking-tight text-white leading-[1.1]">
+          Exploring Our Latest <span className="inline-block bg-[#f2cf07] text-[#070142] px-3 py-1 rounded -rotate-2 font-bold mx-1 shadow-md">Insights</span>
         </AnimatedHeading>
       </section>
 
-      {/* Soft Ambient Brand Green Glows */}
-      <div className="absolute left-[-15%] top-[15%] w-[500px] h-[500px] bg-emerald-500/[0.20] rounded-full blur-[110px] pointer-events-none" />
-      <div className="absolute right-[-15%] top-[40%] w-[500px] h-[500px] bg-emerald-500/[0.15] rounded-full blur-[110px] pointer-events-none" />
-      
+
+
       <div className="mx-auto max-w-[1300px] px-6 md:px-12 lg:px-16 flex flex-col lg:flex-row gap-12 lg:gap-24 relative z-10 pt-10 pb-16 md:pt-24 md:pb-32">
-        
+
         {/* Main Content */}
         <div className="w-full lg:w-[65%]">
           <Link
             href="/blogs"
-            className="mb-6 md:mb-10 inline-flex items-center gap-2 text-[0.95rem] font-medium text-neutral-500 hover:text-emerald-700 transition-colors"
+            className="mb-6 md:mb-10 inline-flex items-center gap-2 text-[0.95rem] font-medium text-neutral-500 hover:text-[#070142] transition-colors"
           >
             <ArrowLeft className="h-4 w-4" />
             Back to Blogs
           </Link>
 
           <div className="mb-4 md:mb-6">
-            <span className="inline-block bg-emerald-900 text-white px-3 py-1 rounded -rotate-2 font-bold shadow-sm text-sm">
+            <span className="inline-block bg-[#070142] text-white px-3 py-1 rounded -rotate-2 font-bold shadow-sm text-sm">
               {post.category}
             </span>
           </div>
 
           <AnimatedHeading as="h1" className="font-display text-3xl sm:text-4xl md:text-[3.5rem] lg:text-[4.25rem] font-medium leading-[1.15] tracking-tight text-neutral-900">
             {post.title.split(" ").slice(0, -1).join(" ")}{" "}
-            <span className="bg-emerald-900 text-white px-3 py-1 inline-block -rotate-2 mx-1 shadow-sm">
+            <span className="bg-[#070142] text-white px-3 py-1 inline-block -rotate-2 mx-1 shadow-sm">
               {post.title.split(" ").slice(-1)[0]}
             </span>
           </AnimatedHeading>
 
           <div className="mt-6 md:mt-8 flex flex-wrap items-center gap-x-3 gap-y-2 md:gap-4 border-y border-neutral-200 py-3 md:py-5 text-[13px] sm:text-[14px] md:text-[0.95rem] font-medium text-neutral-500">
-            <span className="whitespace-nowrap">{today}</span>
+            <span className="whitespace-nowrap">{post.date}</span>
             <span className="text-neutral-400 hidden min-[370px]:inline">•</span>
             <span className="whitespace-nowrap">{post.category}</span>
             <span className="text-neutral-400 hidden min-[370px]:inline">•</span>
@@ -116,26 +108,25 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               {post.excerpt}
             </p>
             <p className="mb-6">
-              At HopeBridge Foundation, we believe that lasting change begins with
-              informed action and <span className="inline-block bg-emerald-900 text-white px-1.5 py-0.5 rounded rotate-1 text-[0.9em] shadow-sm">community</span> participation. This article explores
-              the themes central to our mission and shares practical insights from
-              our field work.
+              At MBS, we believe that business growth begins with
+              informed decision-making and <span className="inline-block bg-[#070142] text-white px-1.5 py-0.5 rounded rotate-1 text-[0.9em] shadow-sm">compliance</span>. This article explores
+              the regulations and procedures central to business success and shares practical insights from
+              our advisory services.
             </p>
             <p className="mb-6">
-              Education is the foundation of lasting community growth. Discover how access to <span className="inline-block bg-emerald-900 text-white px-1.5 py-0.5 rounded -rotate-2 text-[0.9em] shadow-sm">learning</span> transforms lives and neighborhoods. When neighbors come together with a shared purpose, remarkable change becomes possible.
+              Proper documentation is the foundation of corporate stability. Discover how timely <span className="inline-block bg-[#070142] text-white px-1.5 py-0.5 rounded -rotate-2 text-[0.9em] shadow-sm">filings</span> transform businesses and protect owners from penalties. When companies stay compliant, remarkable growth becomes possible.
             </p>
             <p className="mb-6">
-              Whether you are a volunteer, donor, or community member, your
-              involvement makes a real difference. We invite you to explore our
-              programs, <span className="inline-block bg-emerald-900 text-white px-1.5 py-0.5 rounded rotate-2 text-[0.9em] shadow-sm">reach out</span> with questions, or join us in creating positive
-              impact. By working hand in hand, we can build a future where everyone has the opportunity to thrive.
+              Whether you are an individual filer, startup founder, or established corporate director, your
+              business compliance is crucial. We invite you to explore our
+              services, <span className="inline-block bg-[#070142] text-white px-1.5 py-0.5 rounded rotate-2 text-[0.9em] shadow-sm">reach out</span> with questions, or partner with us for professional support. By working hand in hand, we can build a strong compliance structure that allows your business to thrive.
             </p>
           </div>
         </div>
 
         {/* Sidebar */}
         <aside className="w-full lg:w-[35%] lg:pt-24 space-y-8 md:space-y-10">
-          
+
           {/* Recent Blogs Widget */}
           <div className="bg-white rounded-[2rem] p-8 shadow-sm border border-neutral-100">
             <h3 className="font-display text-2xl font-bold text-neutral-900 mb-6">Recent Articles</h3>
@@ -150,7 +141,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                     )}
                   </div>
                   <div>
-                    <h4 className="font-display font-medium leading-snug text-neutral-900 group-hover:text-emerald-700 transition-colors line-clamp-2">
+                    <h4 className="font-display font-medium leading-snug text-neutral-900 group-hover:text-[#070142] transition-colors line-clamp-2">
                       {recent.title}
                     </h4>
                     <span className="text-sm text-neutral-500 mt-1 block">{recent.date}</span>
@@ -161,14 +152,14 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           </div>
 
           {/* Categories Widget */}
-          <div className="bg-emerald-900 rounded-[2rem] p-8 shadow-lg text-white">
+          <div className="bg-[#070142] rounded-[2rem] p-8 shadow-lg text-white">
             <h3 className="font-display text-2xl font-bold mb-6">Categories</h3>
             <ul className="flex flex-col gap-3">
               {categories.map((category) => (
                 <li key={category}>
-                  <Link href="/blogs" className="flex items-center justify-between py-2 border-b border-emerald-800/50 hover:text-emerald-300 transition-colors">
+                  <Link href="/blogs" className="flex items-center justify-between py-2 border-b border-[#070142]/50 hover:text-white/70 transition-colors">
                     <span>{category}</span>
-                    <span className="bg-emerald-800 text-xs px-2 py-1 rounded-full">Explore</span>
+                    <span className="bg-[#070142] text-xs px-2 py-1 rounded-full">Explore</span>
                   </Link>
                 </li>
               ))}
@@ -178,10 +169,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           {/* Newsletter / CTA Widget */}
           <div className="bg-neutral-100 rounded-[2rem] p-8 border border-neutral-200">
             <h3 className="font-display text-xl font-bold text-neutral-900 mb-2">Never Miss an Update</h3>
-            <p className="text-neutral-600 text-sm mb-6">Join our community newsletter for the latest stories and impact reports.</p>
+            <p className="text-neutral-600 text-sm mb-6">Join our newsletter for the latest tax updates and regulatory compliance alerts.</p>
             <div className="flex flex-col gap-3">
-              <input type="email" placeholder="Email address" className="w-full px-4 py-3 rounded-full border border-neutral-300 focus:outline-none focus:border-emerald-500 bg-white text-sm" />
-              <button className="w-full bg-emerald-900 text-white font-semibold py-3 rounded-full hover:bg-emerald-950 transition-colors text-[0.95rem]">
+              <input type="email" placeholder="Email address" className="w-full px-4 py-3 rounded-full border border-neutral-300 focus:outline-none focus:border-[#070142]/80 bg-white text-sm" />
+              <button className="w-full bg-[#f2cf07] text-[#070142] font-semibold py-3 rounded-full hover:bg-[#070142] hover:text-white transition-colors text-[0.95rem]">
                 Subscribe
               </button>
             </div>

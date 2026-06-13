@@ -24,12 +24,12 @@ The following code has been modified to include a line number before every line,
 17:     <section className="relative overflow-hidden bg-[#05150f] py-24 lg:py-32">
 18:       {/* Background Ambience */}
 19:       <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-5 mix-blend-overlay"></div>
-20:       <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-emerald-900/20 blur-[120px] rounded-full pointer-events-none" />
+20:       <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#070142]/20 blur-[120px] rounded-full pointer-events-none" />
 21: 
 22:       <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10 relative z-10">
 23:         <FadeIn>
 24:           <div className="mb-16 text-center lg:mb-24">
-25:             <Badge dotColor="bg-emerald-400" textColor="text-white" className="border-emerald-800 bg-emerald-900/50 backdrop-blur-md mb-4">
+25:             <Badge dotColor="bg-emerald-400" textColor="text-white" className="border-emerald-800 bg-[#070142]/50 backdrop-blur-md mb-4">
 26:               Why Choose Us
 27:             </Badge>
 28:             <h2 className="font-display text-4xl font-extrabold leading-tight text-white md:text-5xl lg:text-6xl">

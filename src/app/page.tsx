@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import HeroSection from "@/components/home/HeroSection";
 import AboutSection from "@/components/home/AboutSection";
 import CausesSection from "@/components/home/CausesSection";
@@ -8,6 +9,11 @@ import ContactSection from "@/components/home/ContactSection";
 import FAQSection from "@/components/home/FAQSection";
 import FadeIn from "@/components/ui/FadeIn";
 import { faqs } from "@/lib/data/faq";
+
+export const metadata: Metadata = {
+  title: "Tax & Business Registration Services in Pakistan",
+  description: "Helping Individuals, Startups & Businesses with Tax Filing (FBR), SECP Company Registration, Trademark Protection, and Regulatory Compliance in Pakistan.",
+};
 
 export default function HomePage() {
   return (

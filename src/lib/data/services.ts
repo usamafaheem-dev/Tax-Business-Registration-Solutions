@@ -1,66 +1,99 @@
 import {
-  BookOpen,
-  Heart,
-  Users,
-  GraduationCap,
-  HandHeart,
-  Lightbulb,
+  FileText,
+  Building,
+  Briefcase,
+  Scale,
+  Globe,
+  BadgeCheck,
+  Calculator,
+  Landmark,
+  FileArchive
 } from "lucide-react";
 
 export const services = [
   {
-    id: "education",
-    title: "Education Support",
-    shortDescription:
-      "Scholarships, school supplies, and learning centers for children in underserved communities.",
-    description:
-      "Our Education Support program provides scholarships, school supplies, and after-school tutoring to children who lack access to quality education. We partner with local schools and volunteers to create safe learning environments.",
-    icon: BookOpen,
+    id: "ntn-registration",
+    title: "NTN Registration",
+    shortDescription: "Get your National Tax Number registered quickly and easily.",
+    description: "We provide hassle-free NTN Registration services for individuals and businesses, ensuring full compliance with FBR requirements.",
+    icon: FileText,
   },
   {
-    id: "healthcare",
-    title: "Healthcare",
-    shortDescription:
-      "Free medical camps, health awareness drives, and essential care for families in need.",
-    description:
-      "We organize free medical camps, distribute essential medicines, and run health awareness campaigns on nutrition, hygiene, and preventive care to improve community wellbeing.",
-    icon: Heart,
+    id: "income-tax-return",
+    title: "Income Tax Return Filing",
+    shortDescription: "Professional filing of your annual Income Tax Returns.",
+    description: "Become an active taxpayer (Filer) with our expert Income Tax Return filing services, avoiding penalties and securing tax benefits.",
+    icon: Calculator,
   },
   {
-    id: "women-empowerment",
-    title: "Women Empowerment",
-    shortDescription:
-      "Skills training, microfinance support, and leadership programs for women.",
-    description:
-      "Our Women Empowerment initiative offers vocational training, microfinance guidance, and leadership workshops to help women gain financial independence and confidence.",
-    icon: Users,
+    id: "sales-tax",
+    title: "Sales Tax Registration & Returns",
+    shortDescription: "Register for Sales Tax and manage your monthly returns seamlessly.",
+    description: "We assist businesses with Sales Tax Registration (FBR/SRB/PRA) and ensure timely filing of monthly sales tax returns.",
+    icon: FileArchive,
   },
   {
-    id: "youth-training",
-    title: "Youth Training",
-    shortDescription:
-      "Career skills, digital literacy, and mentorship for young people.",
-    description:
-      "Youth Training programs focus on employability skills, digital literacy, and mentorship—preparing the next generation to lead positive change in their communities.",
-    icon: GraduationCap,
+    id: "company-registration-secp",
+    title: "Company Registration (SECP)",
+    shortDescription: "Register your company with SECP with complete legal support.",
+    description: "Seamless registration of your business entity with the Securities and Exchange Commission of Pakistan.",
+    icon: Building,
   },
   {
-    id: "community-welfare",
-    title: "Community Welfare",
-    shortDescription:
-      "Food drives, disaster relief, and support for vulnerable families.",
-    description:
-      "Through food distribution, disaster relief, and family support services, we stand with communities during hardship and help them rebuild with dignity.",
-    icon: HandHeart,
+    id: "pvt-ltd-registration",
+    title: "Private Limited Company Registration",
+    shortDescription: "Establish your Private Limited Company efficiently.",
+    description: "End-to-end support for incorporating your Private Limited Company, from name reservation to final incorporation.",
+    icon: Building,
   },
   {
-    id: "training-programs",
-    title: "Training Programs",
-    shortDescription:
-      "Volunteer training, skills development, and community awareness sessions.",
-    description:
-      "Our Training Programs include volunteer orientation, professional skills workshops, and community awareness sessions on rights, health, and civic engagement.",
-    icon: Lightbulb,
+    id: "trade-mark",
+    title: "Trademark Registration",
+    shortDescription: "Protect your brand identity with official Trademark registration.",
+    description: "Secure your brand name, logo, and intellectual property with our comprehensive Trademark registration and IPO filing services.",
+    icon: BadgeCheck,
+  },
+  {
+    id: "import-export",
+    title: "Import Export License",
+    shortDescription: "Acquire your Import Export Licence effortlessly.",
+    description: "Expand your business globally by acquiring an Import Export Licence (WEBOC/PSW) with our expert guidance and documentation support.",
+    icon: Globe,
+  },
+  {
+    id: "secp-annual-filing",
+    title: "SECP Annual Filing",
+    shortDescription: "Annual statutory filings and compliance with SECP regulations.",
+    description: "Ensure your corporate entity remains compliant with the Securities and Exchange Commission of Pakistan through timely statutory filings.",
+    icon: Landmark,
+  },
+  {
+    id: "pseb-registration",
+    title: "PSEB Registration",
+    shortDescription: "Register your IT company with the Pakistan Software Export Board.",
+    description: "Avail tax exemptions and export benefits for your IT business by registering with the Pakistan Software Export Board (PSEB).",
+    icon: Scale,
+  },
+  {
+    id: "business-registration-compliance",
+    title: "Business Registration & Compliance",
+    shortDescription: "Complete business registration and ongoing compliance.",
+    description: "Start your entrepreneurial journey with our comprehensive business registration services and let us handle your ongoing compliance returns.",
+    icon: Briefcase,
+  },
+  {
+    id: "tax-consultancy",
+    title: "Tax Consultancy",
+    shortDescription: "Expert advice on tax planning and optimization.",
+    description: "Strategic tax planning and consultancy services to help your business minimize liabilities and maximize growth.",
+    icon: Calculator,
+  },
+  {
+    id: "business-advisory",
+    title: "Business Advisory Services",
+    shortDescription: "Professional guidance for business strategy and growth.",
+    description: "Comprehensive advisory services tailored to your business needs, ensuring sustainable growth and regulatory compliance.",
+    icon: Briefcase,
   },
 ];
 
@@ -73,34 +106,34 @@ export const whyChooseUs = [
   {
     title: "Transparent Operations",
     description:
-      "Every donation is tracked and reported so supporters know exactly how their contribution helps.",
+      "Every document and filing is tracked so our clients know exactly how their matters are handled.",
   },
   {
     title: "Experienced Team",
     description:
-      "Passionate professionals and volunteers with deep roots in the communities we serve.",
+      "Passionate professionals with deep roots in legal, corporate and tax compliance sectors.",
   },
   {
-    title: "Positive Community Impact",
+    title: "Positive Business Impact",
     description:
-      "Measurable outcomes in education, health, and empowerment across multiple regions.",
+      "Measurable outcomes in scaling businesses and keeping them fully compliant.",
   },
 ];
 
 export const trainingPrograms = [
   {
-    title: "Volunteer Training",
+    title: "Corporate Compliance",
     description:
-      "Comprehensive orientation and field training for new volunteers joining our mission.",
+      "Comprehensive orientation for businesses to stay compliant with SECP, FBR, and SRB.",
   },
   {
-    title: "Skills Development",
+    title: "Taxation Basics",
     description:
-      "Workshops on communication, leadership, and technical skills for community members.",
+      "Workshops on managing sales tax and income tax for newly registered companies.",
   },
   {
-    title: "Community Awareness Programs",
+    title: "Business Structuring",
     description:
-      "Sessions on health, education rights, and social issues to build informed communities.",
+      "Sessions on how to structure an AOP, Sole Proprietorship, or PVT LTD company effectively.",
   },
 ];

@@ -13,7 +13,7 @@ export default function PageHero({ title, description }: PageHeroProps) {
 
       <div className="relative mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
         <span className="mb-4 inline-block rounded-full bg-blue-100 px-4 py-1.5 text-sm font-medium text-blue-700 backdrop-blur-sm">
-          HopeBridge Foundation
+          MBS
         </span>
         <AnimatedHeading as="h1" className="text-4xl font-bold tracking-tight text-text md:text-5xl">
           {title}
